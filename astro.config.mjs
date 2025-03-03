@@ -7,6 +7,7 @@ import node from "@astrojs/node";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://rul.sh",
   vite: {
     // @ts-ignore
     plugins: [tailwindcss()],
