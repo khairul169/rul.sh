@@ -3,18 +3,38 @@ import "../styles/global.css";
 
 export interface Props {
   title?: string;
+  description?: string;
+  keywords?: string;
 }
 
-const { title = "Khairul Hidayat" } = Astro.props;
+const {
+  title = "Khairul Hidayat",
+  description = "Frontend Developer, Registered Nurse. A nursing graduate from Politeknik Kesehatan Kemenkes Pontianak, who enjoy developing web and mobile applications, with a particular interest in front-end development. Feel free to reach out if you need assistance or collaboration on any projects!",
+  keywords = "khairul hidayat, khai, irul, rul.sh, khairul.my.id, khai app",
+} = Astro.props;
 ---
 
 <html lang="en" class="dark">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+
+    <meta property="og:title" content={title} />
+    <meta property="og:type" content="profile" />
+    <meta property="og:url" content={Astro.url.toString()} />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content="rul.sh" />
+    <meta property="og:image" content={Astro.url.origin + "/og-img.jpg"} />
+
     <title>{title}</title>
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
   </head>
   <body>
     <slot />
