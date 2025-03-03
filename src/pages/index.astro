@@ -1,0 +1,73 @@
+---
+import Document from "@/layouts/document.astro";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { MailPlusIcon } from "lucide-react";
+import { SiGithub, SiLinkedin, SiWhatsapp } from "react-icons/si";
+---
+
+<Document title="Khairul Hidayat.">
+  <div
+    class="flex flex-col items-center justify-center min-h-screen p-2 sm:p-4 md:!pb-16"
+  >
+    <Card
+      className="w-full max-w-xl p-6 sm:p-10 items-stretch md:items-start gap-8"
+    >
+      <div
+        class="flex flex-col sm:flex-row gap-8 sm:gap-12 text-center sm:text-left items-center sm:items-start"
+      >
+        <div class="flex-1 order-2 sm:order-1">
+          <h1
+            class="text-4xl font-medium bg-gradient-to-r from-violet-400 to-indigo-600 bg-clip-text text-transparent"
+          >
+            Khairul H.
+          </h1>
+          <p class="text-lg mt-3 sm:mt-4">
+            Frontend Developer, Registered Nurse.
+          </p>
+        </div>
+
+        <div class="order-1 sm:order-2 shrink-0">
+          <img
+            alt="profile-image"
+            class="size-32 rounded-full outline outline-accent border-4 border-transparent"
+            src="/assets/images/1725735966402.jpeg"
+          />
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3 flex-wrap">
+        <Button href="mailto:khai@rul.sh" className="basis-full sm:basis-auto">
+          <MailPlusIcon /> Email Me
+        </Button>
+        <Button
+          variant="outline"
+          href="https://github.com/khairul169"
+          target="_blank"
+          title="Github"
+          className="flex-1 sm:flex-none"
+        >
+          <SiGithub />
+        </Button>
+        <Button
+          variant="outline"
+          href="https://www.linkedin.com/in/khairul169"
+          target="_blank"
+          title="Linkedin"
+          className="flex-1 sm:flex-none"
+        >
+          <SiLinkedin />
+        </Button>
+        <Button
+          variant="outline"
+          href="/wa"
+          target="_blank"
+          title="Whatsapp"
+          className="flex-1 sm:flex-none"
+        >
+          <SiWhatsapp />
+        </Button>
+      </div>
+    </Card>
+  </div>
+</Document>
