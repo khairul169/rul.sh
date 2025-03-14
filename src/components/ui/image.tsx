@@ -39,6 +39,7 @@ const Image = ({ className, imgClassName, blurHash, ...props }: ImageProps) => {
 
       <img
         ref={imgRef}
+        loading="lazy"
         className={cn(
           "size-full absolute inset-0 z-[1] transition-[opacity,filter] duration-700",
           !isLoaded && "opacity-0 blur-sm",
