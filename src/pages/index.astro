@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { MailPlusIcon } from "lucide-react";
 import { SiGithub, SiLinkedin, SiWhatsapp } from "react-icons/si";
+import Image from "@/components/ui/image";
 ---
 
 <Document title="Hi, I'm Khairul Hidayat.">
@@ -28,10 +29,16 @@ import { SiGithub, SiLinkedin, SiWhatsapp } from "react-icons/si";
         </div>
 
         <div class="order-1 sm:order-2 shrink-0">
-          <img
+          <Image
+            client:idle
             alt="profile-image"
-            class="size-32 rounded-full outline outline-accent border-4 border-transparent"
+            className="size-32 rounded-full outline outline-accent border-4 border-background bg-[#b58e88]"
             src="/assets/images/1725735966402.webp"
+            blurHash={{
+              data: "TGNHWYRjy@00kC?HuPjF%fQ8ofoy",
+              width: 16,
+              height: 32,
+            }}
           />
         </div>
       </div>
