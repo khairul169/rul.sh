@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { MailPlusIcon } from "lucide-react";
 import { SiGithub, SiLinkedin, SiWhatsapp } from "react-icons/si";
-import Image from "@/components/ui/image";
 ---
 
 <Document title="Hi, I'm Khairul Hidayat.">
@@ -12,7 +11,7 @@ import Image from "@/components/ui/image";
     class="flex flex-col items-center justify-center min-h-screen p-2 sm:p-4 md:!pb-16"
   >
     <Card
-      className="w-full max-w-xl p-6 sm:p-10 items-stretch md:items-start gap-8"
+      className="w-full max-w-xl p-6 sm:p-10 lg:p-12 items-stretch md:items-start gap-8 md:gap-12"
     >
       <div
         class="flex flex-col sm:flex-row gap-8 sm:gap-12 text-center sm:text-left items-center sm:items-start"
@@ -29,22 +28,19 @@ import Image from "@/components/ui/image";
         </div>
 
         <div class="order-1 sm:order-2 shrink-0">
-          <Image
-            client:idle
+          <img
             alt="profile-image"
-            className="size-32 rounded-full outline outline-accent border-4 border-background bg-[#b58e88]"
+            class="size-32 rounded-full outline outline-accent border-4 border-background"
             src="/assets/images/1725735966402.webp"
-            blurHash={{
-              data: "TGNHWYRjy@00kC?HuPjF%fQ8ofoy",
-              width: 16,
-              height: 32,
-            }}
           />
         </div>
       </div>
 
       <div class="flex items-center gap-3 flex-wrap">
-        <Button href="mailto:khai@rul.sh" className="basis-full sm:basis-auto">
+        <Button
+          href="mailto:khai@rul.sh"
+          className="basis-full sm:basis-auto bg-gradient-to-r from-violet-300 to-indigo-300 hover:opacity-80 transition-all"
+        >
           <MailPlusIcon /> Email Me
         </Button>
         <Button
