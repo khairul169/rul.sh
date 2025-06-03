@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: 'Nunito Sans';
-  src: url('/assets/fonts/NunitoSans_10pt-Regular.ttf') format('ttf');
+  src: url('/assets/fonts/NunitoSans_10pt-Regular.ttf');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -149,7 +149,7 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
-  --font-sans: 'Nunito Sans', 'Segoe UI', 'Droid Sans', 'sans-serif';
+  --font-sans: 'Nunito Sans', 'Segoe UI', 'Droid Sans', Times, 'sans-serif', serif;
 }
 
 @layer base {
