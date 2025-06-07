@@ -1,76 +1,44 @@
 ---
 import Document from "@/layouts/document.astro";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import { MailPlusIcon } from "lucide-react";
-import { SiGithub, SiLinkedin, SiWhatsapp } from "react-icons/si";
+import { SiGithub, SiLinkedin } from "react-icons/si";
 ---
 
 <Document title="Hi, I'm Khairul Hidayat.">
   <div
-    class="flex flex-col items-center justify-center min-h-screen p-2 sm:p-4 md:!pb-16"
+    class="flex flex-col items-center justify-center min-h-screen p-2 sm:p-4 md:!pb-16 space-y-8 md:space-y-10"
   >
-    <Card
-      className="w-full max-w-xl p-6 sm:p-10 lg:p-12 items-stretch md:items-start gap-8 md:gap-12"
-    >
-      <div
-        class="flex flex-col sm:flex-row gap-8 sm:gap-12 text-center sm:text-left items-center sm:items-start"
+    <div class="shrink-0">
+      <img
+        alt="profile-image"
+        class="size-40 rounded-full outline outline-accent border-6 border-background"
+        src="/assets/images/1725735966402.webp"
+      />
+    </div>
+
+    <h1 class="text-4xl font-medium text-white">Khairul H.</h1>
+
+    <div class="flex items-center gap-3 flex-wrap">
+      <Button variant="outline" href="mailto:khai@rul.my" title="Email me">
+        <MailPlusIcon />
+      </Button>
+      <Button
+        variant="outline"
+        href="https://github.com/khairul169"
+        target="_blank"
+        title="Github"
       >
-        <div class="flex-1 order-2 sm:order-1">
-          <h1
-            class="text-4xl font-medium bg-gradient-to-r from-violet-400 to-indigo-600 bg-clip-text text-transparent"
-          >
-            Khairul H.
-          </h1>
-          <p class="text-lg mt-3 sm:mt-4">
-            Frontend Developer, Registered Nurse.
-          </p>
-        </div>
-
-        <div class="order-1 sm:order-2 shrink-0">
-          <img
-            alt="profile-image"
-            class="size-32 rounded-full outline outline-accent border-4 border-background"
-            src="/assets/images/1725735966402.webp"
-          />
-        </div>
-      </div>
-
-      <div class="flex items-center gap-3 flex-wrap">
-        <Button
-          href="mailto:khai@rul.my"
-          className="basis-full sm:basis-auto bg-gradient-to-r from-violet-300 to-indigo-300 hover:opacity-80 transition-all"
-        >
-          <MailPlusIcon /> Email Me
-        </Button>
-        <Button
-          variant="outline"
-          href="https://github.com/khairul169"
-          target="_blank"
-          title="Github"
-          className="flex-1 sm:flex-none"
-        >
-          <SiGithub />
-        </Button>
-        <Button
-          variant="outline"
-          href="https://www.linkedin.com/in/khairul169"
-          target="_blank"
-          title="Linkedin"
-          className="flex-1 sm:flex-none"
-        >
-          <SiLinkedin />
-        </Button>
-        {/* <Button
-          variant="outline"
-          href="/wa"
-          target="_blank"
-          title="Whatsapp"
-          className="flex-1 sm:flex-none"
-        >
-          <SiWhatsapp />
-        </Button> */}
-      </div>
-    </Card>
+        <SiGithub />
+      </Button>
+      <Button
+        variant="outline"
+        href="https://www.linkedin.com/in/khairul169"
+        target="_blank"
+        title="Linkedin"
+      >
+        <SiLinkedin />
+      </Button>
+    </div>
   </div>
 </Document>
